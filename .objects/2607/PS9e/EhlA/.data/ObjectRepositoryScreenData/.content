@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="s5Szd5Nwokq6csNd48gXtA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-27, 162, 1392, 927" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFASURBVDhPpZLPSgJRFIfvi/gEPUFv4BP0Cq3btmrhtra2CGmRG11ZGxdCK10kESNCRqCVCoESNCDNMKNHvgP3Ok6OJv3gzp977/nO79x7jPxTJj2R1sIfStS+SE877QTMxy35Kebcd1g7kkXw7dZ/ASrNdzkpPcrx5YOc3z7Lm9dwAILDan5t/xrgrj2SQrUrT4MvmfqBXN/3FTYLY10HgAtG1DxbAdhMMJsbnc8kU10U66/S6k30P/Ku1BEwBXxMZxpINgbWmbMCDOS07Ok6hxr3Km7d2EArgq1lRHYgzJEItwC4Gd4GOjVnCesWyN6Xsa/2bRmGUyfLLuGM8nCQlIHOyVMjGbIGwSSL+3UJbg71JhTAAwhWqTVr4IADnE+62gtB6WAF+KsIsm0NCO0FoHmAbG3lbSIw2QNoL8AmLQEDI7HsTj6zogAAAABJRU5ErkJggg==" Selector="&lt;html app='msedge.exe' title='IT Jobs Watch | Real-Time Digital &amp;amp; IT Job Market Trends &amp;amp; Actionable Insights' /&gt;" Url="https://www.itjobswatch.co.uk/" Version="V2">
+      <imageRef attrName="InformativeScreenshot" originalValue="5bda4742337d53c43c079df6a0eafd70.jpg" xmlns="">0AnxEpXN6A0ipXI82o8tgsA</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

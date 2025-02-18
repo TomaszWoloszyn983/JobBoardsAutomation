@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge IT Jobs Watch  Real-Time Digital & IT Jo",
+  "Type": "Screen",
+  "Id": "Z5yT-_rqwkepnaf2obczhw",
+  "Reference": "S_LMoOQ4uUKB01M6qo1BNg/Z5yT-_rqwkepnaf2obczhw",
+  "ParentRef": "S_LMoOQ4uUKB01M6qo1BNg/PS9entA2iEes1FQuqUhxlA",
+  "Created": "2025-02-17T13:49:05.750873Z",
+  "Updated": "2025-02-17T13:49:05.750873Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
