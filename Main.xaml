@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -41,6 +41,11 @@
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Net</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -100,11 +105,22 @@
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1081,2540" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="849,2572" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_addresses" />
+      <Variable x:TypeArguments="x:String" Name="str_userEmail" />
+      <Variable x:TypeArguments="x:String" Name="str_userPassword" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -113,33 +129,62 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="522,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Reading data from excel ...&quot;]" />
     <ui:Comment sap:VirtualizedContainerService.HintSize="522,261" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Odczytujemy adresy z excel'a z Data/Input/addresses.&#xA;&#xA;Otwieramy przeglądarkę&#xA;&#xA;Wewnatrz openApplication/browser w pętli odczytujemy każdy adres z excela&#xA;&#xA;Używamy Switch/case aby odpalić sekwencje dla każdego adresu" />
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="***  Do zastapienia przez GetCredentials ***" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="522,210" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_userEmail]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">tomaszwoloszyn983@gmail.com</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[str_userPassword]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">Ka52tan69!</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
     <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_addresses]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="522,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Data\Input\addresses.xlsx" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Edge IT Jobs Watch  Real-Time Digital &amp; IT Jo" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="522,1799" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" IsIncognito="False" OpenMode="IfNotOpen" ScopeGuid="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Open Edge " HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="522,1621" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" IsIncognito="False" OpenMode="IfNotOpen" ScopeGuid="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="488,1510" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="488,1372" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_addresses]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="454,1448" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_addresses]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="454,1310" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentAddress" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="452,1277" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="452,1137" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="418,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Processing address: &quot;+CurrentAddress.Item(0).ToString]" />
-                    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[CurrentAddress.Item(0).ToString]" sap:VirtualizedContainerService.HintSize="418,1042" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                    <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="" DisplayName="Switch" Expression="[CurrentAddress.Item(0).ToString]" sap:VirtualizedContainerService.HintSize="418,902" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                       <Switch.Default>
                         <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_4">
                           <sap:WorkflowViewStateService.ViewState>
@@ -149,6 +194,11 @@
                           </sap:WorkflowViewStateService.ViewState>
                         </Sequence>
                       </Switch.Default>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                       <Sequence x:Key="https://www.itjobswatch.co.uk/ " DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,340" sap2010:WorkflowViewState.IdRef="Sequence_6">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -159,13 +209,295 @@
                         <uix:NGoToUrl DisplayName="Go To URL" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[CurrentAddress.Item(0).ToString]" Version="V4" />
                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Page open. Nothing to do here.&quot;]" />
                       </Sequence>
-                      <Sequence x:Key="https://www.technojobs.co.uk/" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,165" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence x:Key="https://www.technojobs.co.uk/" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:Boolean" Name="is_loginBtn" />
+                        </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NGoToUrl DisplayName="Go To URL" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,105" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[CurrentAddress.Item(0).ToString]" Version="V4" />
+                        <uix:NGoToUrl DisplayName="Go To URL - technojobs" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[CurrentAddress.Item(0).ToString]" Version="V4" />
+                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="454,403" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                          <TryCatch.Finally>
+                            <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </TryCatch.Finally>
+                          <TryCatch.Try>
+                            <uix:NCheckElement DelayBefore="0" DisplayName="Check Element 'Log In'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,157" sap2010:WorkflowViewState.IdRef="NCheckElement_1" Result="[is_loginBtn]" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Version="V4">
+                              <uix:NCheckElement.Target>
+                                <uix:TargetAnchorable BrowserURL="technojobs.co.uk" CVScreenId="ec0d2226-07e4-4f3d-9797-e87e4017dd54" ContentHash="t5qa3iFKVUKSIDiPHlTcxw" CvElementArea="1066, 305, 119, 45" CvTextArea="1117, 320, 44, 18" CvTextArgument="Log In" CvType="Button" DesignTimeRectangle="1107, 307, 117, 42" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='                                                                                                                                                                  Log In                     ' tag='A' type='' class='button button--regular button--fluid' check:innerText='Log In' /&gt;" Guid="e322e5d3-a226-485a-ac34-457cd6fdb59b" InformativeScreenshot="c96a7d79a5c1399399372f54df82b6f1.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/3Y3MtoOBpUKOlJ_filthVg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Technojobs – Expert IT Jobs &amp;amp; Tech Recruitment Solutions in the UK | Over 20 Years Filling IT &amp;amp;Tech Roles' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                                      <uix:Target CVScreenId="ec0d2226-07e4-4f3d-9797-e87e4017dd54" CvElementArea="1191, 305, 102, 46" CvTextArea="1214, 320, 54, 17" CvTextArgument="Sign Up" CvType="Button" DesignTimeRectangle="1232, 307, 99, 42" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='                         Sign Up                     ' tag='A' type='' class='button button--regular button--secondary button--fluid' check:innerText='Sign Up' /&gt;" Guid="1e893b15-c029-49aa-aa5c-bc1b519767df" SearchSteps="FuzzySelector, CV" />
+                                      <uix:Target CVScreenId="ec0d2226-07e4-4f3d-9797-e87e4017dd54" CvElementArea="1066, 305, 119, 45" CvTextArea="1117, 320, 44, 18" CvTextArgument="Log In" CvType="Button" DesignTimeRectangle="1159, 318, 41, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Log In' tag='SPAN' type='' class='' check:innerText='Log In' /&gt;" Guid="6a441daa-5f4d-4c5a-83a0-acfc9ad1d0fe" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NCheckElement.Target>
+                            </uix:NCheckElement>
+                          </TryCatch.Try>
+                        </TryCatch>
+                        <If Condition="[is_loginBtn]" DisplayName="If - user NOT logged in" sap:VirtualizedContainerService.HintSize="454,1171" sap2010:WorkflowViewState.IdRef="If_1">
+                          <If.Then>
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="452,1008" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log In btn" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="418,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Version="V4">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="technojobs.co.uk" CVScreenId="ec0d2226-07e4-4f3d-9797-e87e4017dd54" ContentHash="zSmBPYtTrkihDI0uZQ_uEg" CvElementArea="1066, 305, 119, 45" CvTextArea="1117, 320, 44, 18" CvTextArgument="Log In" CvType="Button" DesignTimeRectangle="1067, 307, 117, 42" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='                                                                                                                                                                  Log In                     ' tag='A' type='' class='button button--regular button--fluid' check:innerText='Log In' /&gt;" Guid="c5cda488-14a6-4c01-b01c-78624f9b5db1" InformativeScreenshot="17b70d3178b74850c1353d816a385ac2.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/UJ1MmZcvb0OGT0dGVRge6g" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Technojobs – Expert IT Jobs &amp;amp; Tech Recruitment Solutions in the UK | Over 20 Years Filling IT &amp;amp;Tech Roles' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target CVScreenId="ec0d2226-07e4-4f3d-9797-e87e4017dd54" CvElementArea="1066, 305, 119, 45" CvTextArea="1117, 320, 44, 18" CvTextArgument="Log In" CvType="Button" DesignTimeRectangle="1119, 318, 41, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Log In' tag='SPAN' type='' class='' check:innerText='Log In' /&gt;" Guid="1974af1c-9644-4599-a2db-ec5b89bd7ab2" SearchSteps="FuzzySelector, CV" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                                <uix:NClick.VerifyOptions>
+                                  <uix:VerifyExecutionOptions DisplayName="Button 'Button 'Login to my candidate a…''" Mode="Appears">
+                                    <uix:VerifyExecutionOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionOptions.Retry>
+                                    <uix:VerifyExecutionOptions.Target>
+                                      <uix:TargetAnchorable BrowserURL="technojobs.co.uk/login-choose.phtml" CVScreenId="58704e02-b7a4-46a2-b3e3-8c1991b49e8f" ContentHash="lyW9zWRpVUKMxsPfhX2zFA" CvElementArea="44, 653, 275, 50" CvTextArea="71, 669, 221, 18" CvTextArgument="Login to my candidate account" CvType="Button" DesignTimeRectangle="45, 654, 273, 48" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='Login to my candidate account' tag='BUTTON' type='' class='button button--email button--fluid' check:innerText='Login to my candidate account' /&gt;" Guid="6d683f15-b60e-4f06-a243-83208b288c4e" InformativeScreenshot="2eb945b9643a9d999e1950da4cee99d6.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/pdc4A_sIYUig3AZPZvPPng" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Technojobs - The Technical Recruitment Site for jobs in the IT, Electronics, Engineering and Telecoms industries' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target CVScreenId="3d31bca8-661a-48f3-a34d-a8e519c1b212" CvElementArea="332, 652, 265, 51" CvTextArea="360, 669, 210, 18" CvTextArgument="Login to my recruiter account" CvType="Button" DesignTimeRectangle="334, 654, 262, 48" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='Login to my recruiter                             account                         ' tag='BUTTON' type='' class='button button--fluid button--secondary freework-link' check:innerText='Login to my recruiter account' /&gt;" Guid="50284ff9-6c34-4481-97e6-b0226c6ef2ab" SearchSteps="FuzzySelector, CV" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:VerifyExecutionOptions.Target>
+                                    <uix:VerifyExecutionOptions.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:VerifyExecutionOptions.Timeout>
+                                  </uix:VerifyExecutionOptions>
+                                </uix:NClick.VerifyOptions>
+                              </uix:NClick>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button 'Login to my candidate a…''" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="418,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Version="V4">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="technojobs.co.uk/login-choose.phtml" CVScreenId="58704e02-b7a4-46a2-b3e3-8c1991b49e8f" ContentHash="lyW9zWRpVUKMxsPfhX2zFA" CvElementArea="44, 653, 275, 50" CvTextArea="71, 669, 221, 18" CvTextArgument="Login to my candidate account" CvType="Button" DesignTimeRectangle="45, 654, 273, 48" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='Login to my candidate account' tag='BUTTON' type='' class='button button--email button--fluid' check:innerText='Login to my candidate account' /&gt;" Guid="6d683f15-b60e-4f06-a243-83208b288c4e" InformativeScreenshot="2eb945b9643a9d999e1950da4cee99d6.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/pdc4A_sIYUig3AZPZvPPng" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Technojobs - The Technical Recruitment Site for jobs in the IT, Electronics, Engineering and Telecoms industries' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target CVScreenId="3d31bca8-661a-48f3-a34d-a8e519c1b212" CvElementArea="332, 652, 265, 51" CvTextArea="360, 669, 210, 18" CvTextArgument="Login to my recruiter account" CvType="Button" DesignTimeRectangle="334, 654, 262, 48" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='Login to my recruiter                             account                         ' tag='BUTTON' type='' class='button button--fluid button--secondary freework-link' check:innerText='Login to my recruiter account' /&gt;" Guid="50284ff9-6c34-4481-97e6-b0226c6ef2ab" SearchSteps="FuzzySelector, CV" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                                <uix:NClick.VerifyOptions>
+                                  <uix:VerifyExecutionOptions DisplayName="Icon 'A /en-gb/tech-it'" Mode="Appears">
+                                    <uix:VerifyExecutionOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionOptions.Retry>
+                                    <uix:VerifyExecutionOptions.Target>
+                                      <uix:TargetAnchorable BrowserURL="free-work.com/en-gb/login" CVScreenId="9a657805-e829-468d-9183-d0bb957ca875" ContentHash="Gn_VZGtLJEKqes4LNpn5ig" CvElementArea="37, 236, 151, 104" CvType="Icon" DesignTimeRectangle="56, 251, 111, 70" DesignTimeScaleFactor="1" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl tag='svg' type='' class='' aaname='        ' /&gt;" Guid="da3785b5-524c-43c0-b4bf-c0fa5013a5f8" ImageBase64="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" InformativeScreenshot="4485cfbba3c403435e43538339b2d4fb.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/Hzq9qbadFUmBl5_ZN6PAHw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Let’s sign in | Free-Work' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target CVScreenId="9a657805-e829-468d-9183-d0bb957ca875" CvElementArea="37, 236, 151, 104" CvType="Icon" DesignTimeRectangle="36, 235, 151, 102" FuzzySelectorArgument="&lt;webctrl tag='A' type='' class='inline-flex py-4 px-5 items-center justify-center bg-white rounded-lg shadow hover:shadow-md mb-8' aaname='        ' /&gt;" Guid="01fb6512-b2ce-4dd4-8106-cf39fd4cdcfa" ImageBase64="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" SearchSteps="FuzzySelector, CV" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:VerifyExecutionOptions.Target>
+                                    <uix:VerifyExecutionOptions.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:VerifyExecutionOptions.Timeout>
+                                  </uix:VerifyExecutionOptions>
+                                </uix:NClick.VerifyOptions>
+                              </uix:NClick>
+                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,498" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                                <TryCatch.Try>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="416,222" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - email" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Text="[str_userEmail]" Timeout="3" Version="V4">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="free-work.com/en-gb/login" CVScreenId="7f1c091b-205a-47dc-9097-dbaa68fd49af" ContentHash="vMCSuZY-5EmsVvsN2zfWgA" CvElementArea="55, 596, 611, 45" CvType="InputBox" DesignTimeRectangle="56, 597, 608, 44" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='email' class='form-input rounded-md w-full h-full' placeholder='Email' aaname='     Email    ' /&gt;" Guid="e3b8dea4-5f5d-4b2f-8a41-2095cfcf1259" InformativeScreenshot="d571cf499cbb541f6c81184c405b1993.png" IsResponsive="True" Reference="S_LMoOQ4uUKB01M6qo1BNg/uKcCTk5rWEqIUxLbOUchSA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Let’s sign in | Free-Work' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <uix:Target CVScreenId="7f1c091b-205a-47dc-9097-dbaa68fd49af" CvTextArea="55, 575, 36, 11" CvTextArgument="EMAIL" CvType="Text" DesignTimeRectangle="56, 573, 608, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='block text-xs uppercase tracking-wide mb-2' aaname='     Email    ' check:innerText='EMAIL' /&gt;" Guid="1c773092-e37d-4433-b2f3-45a40f57a329" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NTypeInto.Target>
+                                      <uix:NTypeInto.VerifyOptions>
+                                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                            <InArgument x:TypeArguments="x:Boolean" />
+                                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                            <InArgument x:TypeArguments="x:Double" />
+                                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                        </uix:VerifyExecutionTypeIntoOptions>
+                                      </uix:NTypeInto.VerifyOptions>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Text="[str_userPassword]" Timeout="5" Version="V4">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="free-work.com/en-gb/login" CVScreenId="d3b13403-2619-491b-8cb4-e503bba28c3d" ContentHash="kJO1gbtV2k-ulrxcWL36qA" CvElementArea="56, 688, 608, 46" CvType="InputBox" DesignTimeRectangle="56, 689, 608, 44" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='form-input rounded-md w-full h-full' placeholder='Password' aaname='         Password       ' /&gt;" Guid="1ae19670-6223-448c-8255-158f76f46c9c" InformativeScreenshot="9ae9ba86b977eb48d9dade581b9c33ef.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/5jLQ7lQlXE6NUPbScbFQcg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Let’s sign in | Free-Work' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <uix:Target CVScreenId="d3b13403-2619-491b-8cb4-e503bba28c3d" CvTextArea="55, 668, 68, 12" CvTextArgument="PASSWORD" CvType="Text" DesignTimeRectangle="56, 667, 66, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='         Password       ' tag='LABEL' type='' class='uppercase text-xs text-gray-700' check:innerText='PASSWORD' /&gt;" Guid="fa9f5da2-fc4d-4992-84e8-db1407525023" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NTypeInto.Target>
+                                      <uix:NTypeInto.VerifyOptions>
+                                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                            <InArgument x:TypeArguments="x:Boolean" />
+                                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                            <InArgument x:TypeArguments="x:Double" />
+                                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                        </uix:VerifyExecutionTypeIntoOptions>
+                                      </uix:NTypeInto.VerifyOptions>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign in'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Timeout="5" Version="V4">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="free-work.com/en-gb/login" CVScreenId="3b2b7eb6-9df5-4554-996e-88e102ad2afc" ContentHash="rHM0XubU-UqMLKW8uwJwJg" CvElementArea="51, 796, 616, 46" CvTextArea="331, 809, 57, 21" CvTextArgument="Sign in" CvType="Button" DesignTimeRectangle="56, 797, 608, 44" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='w-full btn btn--medium btn--primary' aaname='          Sign in      ' check:innerText='Sign in' /&gt;" Guid="d51ee0be-61c0-4bee-b578-393b3a60c391" InformativeScreenshot="374d561095006ddb6190a59a72a59bae.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/WlZ8YRtW40aaQ7N7kY1QOw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Let’s sign in | Free-Work' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <uix:Target CVScreenId="3b2b7eb6-9df5-4554-996e-88e102ad2afc" CvTextArea="87, 752, 228, 15" CvTextArgument="Remember me for one week" CvType="Text" DesignTimeRectangle="88, 749, 226, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Remember me for one week' tag='SPAN' type='' class='' check:innerText='Remember me for one week' /&gt;" Guid="76e9af00-d83d-4f21-83bd-3bf93a3e0b98" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                      <uix:NClick.VerifyOptions>
+                                        <uix:VerifyExecutionOptions DisplayName="Icon 'Tomasz Wołoszyn'" Mode="Appears">
+                                          <uix:VerifyExecutionOptions.Retry>
+                                            <InArgument x:TypeArguments="x:Boolean" />
+                                          </uix:VerifyExecutionOptions.Retry>
+                                          <uix:VerifyExecutionOptions.Target>
+                                            <uix:TargetAnchorable BrowserURL="free-work.com/en-gb/tech-it" CVScreenId="4ce6ec18-42ed-42cf-8a8e-0c6f1a466a91" ContentHash="0cFW2orFTkSdTyv0qsVwGQ" DesignTimeRectangle="1106, 170, 44, 44" DesignTimeScaleFactor="1" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl tag='IMG' type='' class='object-cover rounded-full' aaname='' /&gt;" Guid="676194f8-d6c8-44f1-8824-9a66451db112" InformativeScreenshot="2568368492e4e30580a73beb189f7b35.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/XK1ilqnPb0CTMMnhsdkX4g" ScopeSelectorArgument="&lt;html app='msedge.exe' title='The Platform for IT &amp;amp; Tech Professionals: Job Opportunities, a Forum, Guides, and More | Free-Work' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                  <uix:Target CVScreenId="4ce6ec18-42ed-42cf-8a8e-0c6f1a466a91" DesignTimeRectangle="1162, 172, 126, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='user-menu' tag='SPAN' type='' class='inline-block font-medium max-w-[12rem] truncate' aaname='*' /&gt;" Guid="b555ea82-13cf-46be-a8b6-ad07c21a1231" ImageBase64="" SearchSteps="FuzzySelector" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:VerifyExecutionOptions.Target>
+                                          <uix:VerifyExecutionOptions.Timeout>
+                                            <InArgument x:TypeArguments="x:Double" />
+                                          </uix:VerifyExecutionOptions.Timeout>
+                                        </uix:VerifyExecutionOptions>
+                                      </uix:NClick.VerifyOptions>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NClick>
+                                  </Sequence>
+                                </TryCatch.Try>
+                                <TryCatch.Catches>
+                                  <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                    <ActivityAction x:TypeArguments="s:Exception">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,226" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Warn" Message="[&quot;User already logged in&quot;]" />
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </Catch>
+                                </TryCatch.Catches>
+                                <TryCatch.Finally>
+                                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </TryCatch.Finally>
+                              </TryCatch>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Else - when user already logged in" sap:VirtualizedContainerService.HintSize="452,25" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;User logged in!&quot;]" />
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                        <uix:NHover DisplayName="Hover 'Tomasz Wołoszyn Immedia…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="454,225" sap2010:WorkflowViewState.IdRef="NHover_2" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Version="V4">
+                          <uix:NHover.Target>
+                            <uix:TargetAnchorable BrowserURL="free-work.com/en-gb/tech-it/jobs" CVScreenId="3a886023-22c0-4050-8e95-ab3a022af7d5" ContentHash="wi5bHOKHNEOXBAvBBUwUIg" CvElementArea="1295, 178, 21, 20" CvType="ArrowButton" DesignTimeRectangle="1300, 183, 12, 14" DesignTimeScaleFactor="1" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl parentid='user-menu' tag='svg' type='' class='mb-1 h-4 w-4 text-gray-400 icon-custom fill-current flex-none inline-flex' aaname='' /&gt;" Guid="09b7e644-1ef2-41a8-a7f4-6fe0fc0f1ee8" InformativeScreenshot="69c01cbadf96b4e32c9d42edeae61612.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/ZGzrXtFBRUOA_kFEJgTE6g" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tech &amp;amp; IT Jobs for Permanent Employees, Contractors, and Freelancers | Free-Work' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="1090, 170, 238, 44" FuzzySelectorArgument="&lt;webctrl id='user-menu' tag='DIV' type='' class='flex items-center justify-center space-x-1 hover:bg-faint-white cursor-pointer px-4' aaname='  ' /&gt;" Guid="80261512-c848-4c30-a8c6-7f20f9aaaa7a" ImageBase64="" SearchSteps="FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NHover.Target>
+                          <uix:NHover.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NHover.VerifyOptions>
+                        </uix:NHover>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Logout'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="454,225" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Version="V4">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="free-work.com/en-gb/tech-it/jobs" CVScreenId="7c14e82a-ee43-4e92-b320-20b285ecb828" ContentHash="M85YnCnOlEKscddK-eGlLg" CvElementArea="1046, 713, 275, 50" CvTextArea="1094, 730, 52, 18" CvTextArgument="Logout" CvType="Button" DesignTimeRectangle="1048, 716, 272, 44" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='          Logout        ' parentid='tippy-3' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='          Logout        ' parentid='tippy-3' tag='BUTTON' type='' class='flex flex-1 items-center font-medium cursor-pointer outline-none focus:outline-none text-sm py-3 px-4 transition-all duration-200 rounded-md text-left max-w-full hover:text-white hover:bg-error text-gray-500' check:innerText='Logout' /&gt;" Guid="415beb29-9c83-4940-a343-36b76664c59d" InformativeScreenshot="32fe6e99ca8fabd37ea890f358667f95.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/GiLlaXp3ok-WFmkzBCFSnA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tech &amp;amp; IT Jobs for Permanent Employees, Contractors, and Freelancers | Free-Work' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <uix:Target CVScreenId="7c14e82a-ee43-4e92-b320-20b285ecb828" CvElementArea="1046, 713, 275, 50" CvType="Button" DesignTimeRectangle="1068, 731, 16, 14" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl type='' class='' parentid='tippy-3' tag='path' aaname='' /&gt;" Guid="2d582301-d24f-4a84-843c-8a77ce2aaf81" SearchSteps="FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="454,166" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Logging out from: &quot;+CurrentAddress.Item(0).ToString]" />
                       </Sequence>
                       <Sequence x:Key="https://gb.bebee.com" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,165" sap2010:WorkflowViewState.IdRef="Sequence_8">
                         <sap:WorkflowViewStateService.ViewState>

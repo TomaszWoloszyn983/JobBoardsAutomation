@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="M85YnCnOlEKscddK-eGlLg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="free-work.com/en-gb/tech-it/jobs" CVScreenId="7c14e82a-ee43-4e92-b320-20b285ecb828" CvElementArea="1046, 713, 275, 50" CvTextArea="1094, 730, 52, 18" CvTextArgument="Logout" CvType="Button" DesignTimeRectangle="1048, 716, 272, 44" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='          Logout        ' parentid='tippy-3' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='          Logout        ' parentid='tippy-3' tag='BUTTON' type='' class='flex flex-1 items-center font-medium cursor-pointer outline-none focus:outline-none text-sm py-3 px-4 transition-all duration-200 rounded-md text-left max-w-full hover:text-white hover:bg-error text-gray-500' check:innerText='Logout' /&gt;" Guid="415beb29-9c83-4940-a343-36b76664c59d" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tech &amp;amp; IT Jobs for Permanent Employees, Contractors, and Freelancers | Free-Work' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="7c14e82a-ee43-4e92-b320-20b285ecb828" CvElementArea="1046, 713, 275, 50" CvType="Button" DesignTimeRectangle="1068, 731, 16, 14" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl type='' class='' parentid='tippy-3' tag='path' aaname='' /&gt;" Guid="2d582301-d24f-4a84-843c-8a77ce2aaf81" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="32fe6e99ca8fabd37ea890f358667f95.png" xmlns="">0UpJLJ3hPrEWMT3JAtLsgwA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

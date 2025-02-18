@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Icon 'A en-gbtech-it'",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "Hzq9qbadFUmBl5_ZN6PAHw",
+  "Reference": "S_LMoOQ4uUKB01M6qo1BNg/Hzq9qbadFUmBl5_ZN6PAHw",
+  "ParentRef": "S_LMoOQ4uUKB01M6qo1BNg/Z5yT-_rqwkepnaf2obczhw",
+  "Created": "2025-02-18T09:19:04.7586527Z",
+  "Updated": "2025-02-18T09:19:04.7586527Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

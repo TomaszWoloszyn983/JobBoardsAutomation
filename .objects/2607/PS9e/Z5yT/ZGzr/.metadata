@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Tomasz Wołoszyn Immedia…",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "ZGzrXtFBRUOA_kFEJgTE6g",
+  "Reference": "S_LMoOQ4uUKB01M6qo1BNg/ZGzrXtFBRUOA_kFEJgTE6g",
+  "ParentRef": "S_LMoOQ4uUKB01M6qo1BNg/Z5yT-_rqwkepnaf2obczhw",
+  "Created": "2025-02-18T12:59:01.8085857Z",
+  "Updated": "2025-02-18T12:59:01.8085857Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

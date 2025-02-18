@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="b7wJVQjtBUajJ3UtKROpNw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="free-work.com/en-gb/login" DesignTimeRectangle="36, 437, 296, 44" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='btn--linkedin w-full btn btn--medium btn--social-connect' aaname='           Sign in with LinkedIn      ' check:innerText='Sign in with LinkedIn' /&gt;" Guid="3fc7479f-f17e-4dee-9516-806256b7e1e8" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Let’s sign in | Free-Work' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="1c317f0a-bc61-499e-840e-2743e5342ca8" CvElementArea="34, 436, 300, 47" CvType="Button" DesignTimeRectangle="55, 449, 258, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='       Sign in with LinkedIn     ' tag='SPAN' type='' class='content flex-1 font-semibold whitespace-nowrap' check:innerText='Sign in with LinkedIn' /&gt;" Guid="49f2bda5-81e9-407c-8b08-6b1d8ce0b24c" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="9a1984c035f55bab179902acedd51d64.png" xmlns="">0NH6xxMP1q06ojS5H58S9oA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

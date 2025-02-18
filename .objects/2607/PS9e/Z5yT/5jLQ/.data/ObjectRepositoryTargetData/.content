@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="kJO1gbtV2k-ulrxcWL36qA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="free-work.com/en-gb/login" CVScreenId="d3b13403-2619-491b-8cb4-e503bba28c3d" CvElementArea="56, 688, 608, 46" CvType="InputBox" DesignTimeRectangle="56, 689, 608, 44" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='form-input rounded-md w-full h-full' placeholder='Password' aaname='         Password       ' /&gt;" Guid="1ae19670-6223-448c-8255-158f76f46c9c" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Let’s sign in | Free-Work' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="d3b13403-2619-491b-8cb4-e503bba28c3d" CvTextArea="55, 668, 68, 12" CvTextArgument="PASSWORD" CvType="Text" DesignTimeRectangle="56, 667, 66, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='         Password       ' tag='LABEL' type='' class='uppercase text-xs text-gray-700' check:innerText='PASSWORD' /&gt;" Guid="fa9f5da2-fc4d-4992-84e8-db1407525023" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="9ae9ba86b977eb48d9dade581b9c33ef.png" xmlns="">01nGJLUdYbkeZyQrCjgIlwQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

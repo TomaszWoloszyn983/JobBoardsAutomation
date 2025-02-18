@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Icon 'Tomasz Wołoszyn'",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "XK1ilqnPb0CTMMnhsdkX4g",
+  "Reference": "S_LMoOQ4uUKB01M6qo1BNg/XK1ilqnPb0CTMMnhsdkX4g",
+  "ParentRef": "S_LMoOQ4uUKB01M6qo1BNg/Z5yT-_rqwkepnaf2obczhw",
+  "Created": "2025-02-18T12:47:47.3711916Z",
+  "Updated": "2025-02-18T12:47:47.3711916Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

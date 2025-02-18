@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="rHM0XubU-UqMLKW8uwJwJg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="free-work.com/en-gb/login" CVScreenId="3b2b7eb6-9df5-4554-996e-88e102ad2afc" CvElementArea="51, 796, 616, 46" CvTextArea="331, 809, 57, 21" CvTextArgument="Sign in" CvType="Button" DesignTimeRectangle="56, 797, 608, 44" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='w-full btn btn--medium btn--primary' aaname='          Sign in      ' check:innerText='Sign in' /&gt;" Guid="d51ee0be-61c0-4bee-b578-393b3a60c391" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Let’s sign in | Free-Work' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="3b2b7eb6-9df5-4554-996e-88e102ad2afc" CvTextArea="87, 752, 228, 15" CvTextArgument="Remember me for one week" CvType="Text" DesignTimeRectangle="88, 749, 226, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Remember me for one week' tag='SPAN' type='' class='' check:innerText='Remember me for one week' /&gt;" Guid="76e9af00-d83d-4f21-83bd-3bf93a3e0b98" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="374d561095006ddb6190a59a72a59bae.png" xmlns="">0dArDdhUDVkulazmup8Ws-g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

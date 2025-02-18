@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="utdG5Ig0eUagow46VTq6Sw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="linkedin.com/uas/login" CVScreenId="e0aed5af-ff3f-4f6c-a71a-5f250ec4395a" CvElementArea="35, 472, 544, 55" CvTextArea="281, 492, 53, 19" CvTextArgument="Sign in" CvType="Button" DesignTimeRectangle="36, 474, 544, 52" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn__primary--large from__button--floating' aaname='               Sign in           ' check:innerText='Sign in' /&gt;" Guid="6b2279b1-963e-47d2-b60b-2ae3ee853f98" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LinkedIn Login, Sign in | LinkedIn' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="32, 466, 552, 140" FuzzySelectorArgument="&lt;webctrl type='' class='login__form_action_container login__form_action_container--multiple-actions' parentid='app__container' tag='DIV' aaname='                                           ' check:innerText='Cancel&amp;#xA;Sign in' /&gt;" Guid="fe475371-8a28-4efd-aeaa-f3fca05f101b" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="6f783e92e1dff2fc79ca198db42c7627.png" xmlns="">0tFOyI7bwSESElYjBaxdAGg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge LinkedIn Login, Sign in  LinkedIn",
+  "Type": "Screen",
+  "Id": "UDAPXq2BCkWSYqS4PN4yZg",
+  "Reference": "S_LMoOQ4uUKB01M6qo1BNg/UDAPXq2BCkWSYqS4PN4yZg",
+  "ParentRef": "S_LMoOQ4uUKB01M6qo1BNg/Fkt7lzBhY02jlEEWyj2VHA",
+  "Created": "2025-02-18T09:20:41.8199607Z",
+  "Updated": "2025-02-18T09:20:41.8199607Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.12.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
