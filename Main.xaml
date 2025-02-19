@@ -116,7 +116,7 @@
       <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="642,6519" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="861,4196" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_addresses" />
       <Variable x:TypeArguments="x:String" Name="str_userEmail" />
@@ -159,32 +159,32 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
     <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_addresses]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="594,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Data\Input\addresses.xlsx" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Open Edge" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="594,5568" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" IsIncognito="False" OpenMode="IfNotOpen" ScopeGuid="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Open Edge" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="594,3245" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" IsIncognito="False" OpenMode="IfNotOpen" ScopeGuid="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="560,5319" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="560,2996" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_addresses]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="526,5257" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_addresses]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="526,2934" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentAddress" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="524,5084" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="524,2761" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="490,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Processing address: &quot;+CurrentAddress.Item(0).ToString]" />
-                    <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="" DisplayName="Switch" Expression="[CurrentAddress.Item(0).ToString]" sap:VirtualizedContainerService.HintSize="490,4849" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                    <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="" DisplayName="Switch" Expression="[CurrentAddress.Item(0).ToString]" sap:VirtualizedContainerService.HintSize="490,2526" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                       <Switch.Default>
                         <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="488,89" sap2010:WorkflowViewState.IdRef="Sequence_4">
                           <sap:WorkflowViewStateService.ViewState>
@@ -199,17 +199,17 @@
                           <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence x:Key="https://www.itjobswatch.co.uk/ " DisplayName="Body" sap:VirtualizedContainerService.HintSize="488,340" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <Sequence x:Key="https://www.itjobswatch.co.uk/ " DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,340" sap2010:WorkflowViewState.IdRef="Sequence_6">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NGoToUrl DisplayName="Go To URL" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[CurrentAddress.Item(0).ToString]" Version="V4" />
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="454,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Page open. Nothing to do here.&quot;]" />
+                        <uix:NGoToUrl DisplayName="Go To URL" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[CurrentAddress.Item(0).ToString]" Version="V4" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Page open. Nothing to do here.&quot;]" />
                       </Sequence>
-                      <Sequence x:Key="https://www.technojobs.co.uk/" DisplayName="Body" sap:VirtualizedContainerService.HintSize="488,3985" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence x:Key="https://www.technojobs.co.uk/" DisplayName="Body" sap:VirtualizedContainerService.HintSize="452,2130" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:Boolean" Name="is_loginBtn" />
                         </Sequence.Variables>
@@ -219,8 +219,14 @@
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NGoToUrl DisplayName="Go To URL - technojobs" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[CurrentAddress.Item(0).ToString]" Version="V4" />
-                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="454,668" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                        <uix:NGoToUrl DisplayName="Go To URL - technojobs" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="418,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[CurrentAddress.Item(0).ToString]" Version="V4" />
+                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,668" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
                             <uix:NCheckElement DelayBefore="0" DisplayName="Check Element 'Log In'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,157" sap2010:WorkflowViewState.IdRef="NCheckElement_1" Result="[is_loginBtn]" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Version="V4">
                               <uix:NCheckElement.Target>
@@ -261,12 +267,12 @@
                             </Sequence>
                           </TryCatch.Finally>
                         </TryCatch>
-                        <If Condition="[is_loginBtn]" DisplayName="If - user NOT logged in" sap:VirtualizedContainerService.HintSize="454,1965" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If Condition="[is_loginBtn]" DisplayName="If - user NOT logged in" sap:VirtualizedContainerService.HintSize="418,188" sap2010:WorkflowViewState.IdRef="If_1">
                           <If.Then>
-                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="452,1802" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_11">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -330,7 +336,7 @@
                                   </uix:VerifyExecutionOptions>
                                 </uix:NClick.VerifyOptions>
                               </uix:NClick>
-                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,1292" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,1467" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -338,7 +344,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <TryCatch.Try>
-                                  <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,812" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                  <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,987" sap2010:WorkflowViewState.IdRef="Sequence_16">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -348,7 +354,7 @@
                                       <uix:NTypeInto.Target>
                                         <uix:TargetAnchorable BrowserURL="free-work.com/en-gb/login" CVScreenId="f67c4364-87d1-4e56-b0b4-cd07a6c490e1" ContentHash="FDn3hZGBQUON-LFK2XWOOg" CvElementArea="134, 681, 610, 46" CvType="InputBox" DesignTimeRectangle="134, 682, 608, 44" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='email' class='form-input rounded-md w-full h-full' placeholder='Email' aaname='     Email    ' /&gt;" Guid="05b9dad5-c321-4a89-808a-bffcee63b57c" InformativeScreenshot="64ddeab3fb67abb8af10f97932ee4018.png" IsResponsive="True" Reference="S_LMoOQ4uUKB01M6qo1BNg/hoTOzPBkNEiIZdbSRDODgw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Let’s sign in | Free-Work' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
                                           <uix:TargetAnchorable.Anchors>
-                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                               <uix:Target CVScreenId="f67c4364-87d1-4e56-b0b4-cd07a6c490e1" CvTextArea="133, 660, 36, 11" CvTextArgument="EMAIL" CvType="Text" DesignTimeRectangle="134, 658, 608, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='block text-xs uppercase tracking-wide mb-2' aaname='     Email    ' check:innerText='EMAIL' /&gt;" Guid="b5721fbe-9f82-4293-836c-2d6493b02820" SearchSteps="FuzzySelector, CV" />
                                             </scg:List>
                                           </uix:TargetAnchorable.Anchors>
@@ -365,7 +371,7 @@
                                       <uix:NTypeInto.Target>
                                         <uix:TargetAnchorable BrowserURL="free-work.com/en-gb/login" CVScreenId="f67c4364-87d1-4e56-b0b4-cd07a6c490e1" ContentHash="QgwjX6gEekywcI7bj2Si8w" CvElementArea="132, 773, 610, 46" CvType="InputBox" DesignTimeRectangle="134, 774, 608, 44" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='form-input rounded-md w-full h-full' placeholder='Password' aaname='         Password       ' /&gt;" Guid="35dae679-1183-41fe-94fd-8d99474f7c23" InformativeScreenshot="07f5a788cccb8614739fea881bdff835.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/wOmyM8lzRkeGLADbcQnzLA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Let’s sign in | Free-Work' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
                                           <uix:TargetAnchorable.Anchors>
-                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                               <uix:Target CVScreenId="f67c4364-87d1-4e56-b0b4-cd07a6c490e1" CvTextArea="133, 754, 67, 11" CvTextArgument="PASSWORD" CvType="Text" DesignTimeRectangle="134, 752, 66, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='         Password       ' tag='LABEL' type='' class='uppercase text-xs text-gray-700' check:innerText='PASSWORD' /&gt;" Guid="7872598a-56b6-41b2-ae0e-9d1e55d8ce88" SearchSteps="FuzzySelector, CV" />
                                             </scg:List>
                                           </uix:TargetAnchorable.Anchors>
@@ -388,7 +394,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </uix:NTypeInto>
-                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign in'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,216" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Timeout="5" Version="V4">
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign in'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Timeout="5" Version="V4">
                                       <uix:NClick.Target>
                                         <uix:TargetAnchorable BrowserURL="free-work.com/en-gb/login" CVScreenId="f67c4364-87d1-4e56-b0b4-cd07a6c490e1" ContentHash="Bj5lcIr3WUmOF6MgsAHECw" CvElementArea="133, 881, 611, 46" CvTextArea="409, 894, 57, 21" CvTextArgument="Sign in" CvType="Button" DesignTimeRectangle="134, 882, 608, 44" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='w-full btn btn--medium btn--primary' aaname='          Sign in      ' check:innerText='Sign in' /&gt;" Guid="ae1a400c-8378-487e-9e72-47ca69791c56" InformativeScreenshot="4cf864bdc0fffb1f19afab3c05f80545.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/nKe34wF4s0WHHVNTw_yUtA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Let’s sign in | Free-Work' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" />
                                       </uix:NClick.Target>
@@ -418,6 +424,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </uix:NClick>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Trace" Message="[&quot;Login success.&quot;]" />
                                   </Sequence>
                                 </TryCatch.Try>
                                 <TryCatch.Catches>
@@ -432,7 +439,7 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Warn" Message="[&quot;User already logged in&quot;]" />
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Fatal" Message="[&quot;User already logged in&quot;]" />
                                       </Sequence>
                                     </ActivityAction>
                                   </Catch>
@@ -450,7 +457,7 @@
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Sequence DisplayName="Else - when user already logged in" sap:VirtualizedContainerService.HintSize="452,25" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                            <Sequence DisplayName="Else - when user already logged in" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_12">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -461,9 +468,9 @@
                             </Sequence>
                           </If.Else>
                         </If>
-                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="454,1178" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,1156" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                           <TryCatch.Try>
-                            <Sequence sap:VirtualizedContainerService.HintSize="416,676" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                            <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,676" sap2010:WorkflowViewState.IdRef="Sequence_30">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -494,7 +501,7 @@
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="youtube.com/watch" CVScreenId="9e7a6a6e-2543-41f3-a219-644c1ad94b77" ContentHash="ri_y_0Z3V0eA_Ycit6-YUA" CvElementArea="1200, 714, 277, 50" CvTextArea="1250, 732, 52, 17" CvTextArgument="Logout" CvType="Button" DesignTimeRectangle="1204, 717, 272, 44" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='          Logout        ' parentid='tippy-3' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='          Logout        ' parentid='tippy-3' tag='BUTTON' type='' class='flex flex-1 items-center font-medium cursor-pointer outline-none focus:outline-none text-sm py-3 px-4 transition-all duration-200 rounded-md text-left max-w-full hover:text-white hover:bg-error text-gray-500' check:innerText='Logout' /&gt;" Guid="b87f3748-bb0f-4870-bea0-c317da34f80c" InformativeScreenshot="1e20e8ea26313a0443b398ebe4963d08.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/FTNIqUJRQkGaqU8Hxmgq9g" ScopeSelectorArgument="&lt;html app='msedge.exe' title='The Platform for IT &amp;amp; Tech Professionals: Job Opportunities, a Forum, Guides, and More | Free-Work' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="9e7a6a6e-2543-41f3-a219-644c1ad94b77" CvElementArea="1200, 714, 277, 50" CvType="Button" DesignTimeRectangle="1224, 731, 16, 16" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl type='' class='icon-custom fill-current flex-none inline-flex' parentid='tippy-3' tag='svg' aaname='' /&gt;" Guid="66a5a78e-9041-4f32-a524-ceef4b4a8ce1" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
@@ -542,24 +549,24 @@
                           </TryCatch.Finally>
                         </TryCatch>
                       </Sequence>
-                      <Sequence x:Key="https://gb.bebee.com" DisplayName="Body" sap:VirtualizedContainerService.HintSize="488,25" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <Sequence x:Key="https://gb.bebee.com" DisplayName="Body" sap:VirtualizedContainerService.HintSize="488,1989" sap2010:WorkflowViewState.IdRef="Sequence_8">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:Boolean" Name="exists_login" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NGoToUrl DisplayName="Go To URL" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="418,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="[CurrentAddress.Item(0).ToString]" Version="V4" />
-                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,666" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                        <uix:NGoToUrl DisplayName="Go To URL" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="[CurrentAddress.Item(0).ToString]" Version="V4" />
+                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="454,442" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                           <TryCatch.Try>
                             <uix:NCheckElement DelayBefore="0" DisplayName="Check Element 'Log In bebee.com'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,157" sap2010:WorkflowViewState.IdRef="NCheckElement_2" Result="[exists_login]" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Timeout="3" Version="V4">
                               <uix:NCheckElement.Target>
                                 <uix:TargetAnchorable BrowserURL="gb.bebee.com" CVScreenId="ae1b9e0f-f229-4ff3-aaae-29c69645f2a0" ContentHash="g17KyjPyfUGFrulosNp-Ww" CvTextArea="1262, 184, 45, 18" CvTextArgument="Log In" CvType="Text" DesignTimeRectangle="1251, 160, 68, 64" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='login_header_link' tag='BUTTON' type='' class='navbar-text d-none d-sm-block' aaname=' Log In ' check:innerText='Log In' /&gt;" Guid="536c2cd4-6d71-4ab5-a8b3-07115a7c2fe4" InformativeScreenshot="e633f0d9ab15dfd412a91ef113b90619.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/CLTpe07sOUmh-oEwpSS_kA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='beBee GB | Where Professionals Meet Opportunities' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                       <uix:Target DesignTimeRectangle="235, 160, 1016, 64" FuzzySelectorArgument="&lt;webctrl id='navbarSupportedContent' tag='DIV' type='' class='collapse show navbar-collapse order-xs-3 d-none d-sm-block' aaname='   ' check:innerText='Jobs&amp;#xA;Services&amp;#xA;Search CVs&amp;#xA;For Recruiters&amp;#xA;Social' /&gt;" Guid="670ee6dd-b560-4382-9638-304b291ca11b" SearchSteps="FuzzySelector" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
@@ -573,13 +580,13 @@
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,226" sap2010:WorkflowViewState.IdRef="Sequence_23">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Warn" Message="[&quot;Coudln't find the login button! User already logged in or page &quot;+CurrentAddress.item(0).ToString+&quot; wasn't open properly.&quot;]" />
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Fatal" Message="[&quot;Coudln't find the login button! User already logged in or page &quot;+CurrentAddress.item(0).ToString+&quot; wasn't open properly.&quot;]" />
                                 </Sequence>
                               </ActivityAction>
                             </Catch>
@@ -594,7 +601,7 @@
                             </Sequence>
                           </TryCatch.Finally>
                         </TryCatch>
-                        <If Condition="[exists_login]" DisplayName="If - not logged in" sap:VirtualizedContainerService.HintSize="418,188" sap2010:WorkflowViewState.IdRef="If_2">
+                        <If Condition="[exists_login]" DisplayName="If - not logged in" sap:VirtualizedContainerService.HintSize="454,1325" sap2010:WorkflowViewState.IdRef="If_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -602,10 +609,10 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
-                            <Sequence DisplayName="Then - login" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                            <Sequence DisplayName="Then - login" sap:VirtualizedContainerService.HintSize="452,1162" sap2010:WorkflowViewState.IdRef="Sequence_18">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -613,7 +620,7 @@
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="gb.bebee.com" CVScreenId="acb84a11-159b-4e6f-8bd2-2a234f1c3e44" ContentHash="rFsjdYkH4EygzNYCE_aXwQ" CvTextArea="1262, 184, 45, 18" CvTextArgument="Log In" CvType="Text" DesignTimeRectangle="1251, 160, 68, 64" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='login_header_link' tag='BUTTON' type='' class='navbar-text d-none d-sm-block' aaname=' Log In ' check:innerText='Log In' /&gt;" Guid="4e88db23-32ae-4339-962b-b546f75328a1" InformativeScreenshot="153bf18c03e26be38dc6dc077f277ae8.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/nLmouSwB1UWxQn6bKiKDhg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='beBee GB | Where Professionals Meet Opportunities' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="acb84a11-159b-4e6f-8bd2-2a234f1c3e44" CvTextArea="1262, 184, 45, 18" CvTextArgument="Log In" CvType="Text" DesignTimeRectangle="1262, 184, 45, 18" ElementType="Text" Guid="cd931393-62da-4dc4-ae60-99e50ad11ca7" SearchSteps="CV" TargetType="ComputerVisionBased" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
@@ -627,7 +634,7 @@
                                     <uix:VerifyExecutionOptions.Target>
                                       <uix:TargetAnchorable BrowserURL="gb.bebee.com/login" CVScreenId="0f6db7a8-6264-4133-b48e-a707afe69fd1" ContentHash="--gF5UVRWU-Zzh_oaDn1iQ" CvTextArea="513, 324, 51, 22" CvTextArgument="Login" CvType="Text" DesignTimeRectangle="514, 322, 520, 24" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='mb-3 h5' aaname='Login' check:innerText='Login' /&gt;" Guid="03532f93-4a29-491b-af8c-efeb214e06ae" InformativeScreenshot="0a89447b2575a27310ae9b899b4136c2.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/n2d9CXze2EeaLm85oDD-ng" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Log in beBee United Kingdom' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
                                         <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                             <uix:Target CVScreenId="0f6db7a8-6264-4133-b48e-a707afe69fd1" CvTextArea="717, 212, 121, 30" CvTextArgument="Se beBee" CvType="Text" DesignTimeRectangle="712, 209, 124, 35" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl tag='IMG' type='' class='' aaname='orange logo' /&gt;" Guid="0e1a0532-1e98-454c-8e80-aad79d4ef39b" SearchSteps="FuzzySelector, CV" />
                                           </scg:List>
                                         </uix:TargetAnchorable.Anchors>
@@ -639,9 +646,9 @@
                                   </uix:VerifyExecutionOptions>
                                 </uix:NClick.VerifyOptions>
                               </uix:NClick>
-                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,700" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,877" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                                 <TryCatch.Try>
-                                  <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,222" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                  <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,397" sap2010:WorkflowViewState.IdRef="Sequence_20">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -701,7 +708,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </uix:NTypeInto>
-                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign in'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Timeout="5" Version="V4">
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign in'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Timeout="5" Version="V4">
                                       <uix:NClick.Target>
                                         <uix:TargetAnchorable BrowserURL="gb.bebee.com/login" CVScreenId="4d1d0400-2e57-478c-b061-71455c39eba5" ContentHash="CUhX3CGabEuKW8qlIfboBA" CvElementArea="512, 488, 521, 51" CvTextArea="748, 504, 51, 23" CvTextArgument="Login" CvType="Button" DesignTimeRectangle="514, 490, 520, 48" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='submit_button' tag='BUTTON' type='submit' class='btn btn-primary btn-block btn-lg btn-rounded' aaname=' Login ' check:innerText='Login' /&gt;" Guid="a8564478-ee52-4ff0-b7a5-404bd8ec3fe3" InformativeScreenshot="dd5b2263361a472b98d357e8c173b181.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/WlZ8YRtW40aaQ7N7kY1QOw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Log in beBee United Kingdom' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
                                           <uix:TargetAnchorable.Anchors>
@@ -738,6 +745,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </uix:NClick>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Trace" Message="[&quot;Log message.&quot;]" />
                                   </Sequence>
                                 </TryCatch.Try>
                                 <TryCatch.Catches>
@@ -746,13 +754,13 @@
                                       <ActivityAction.Argument>
                                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                       </ActivityAction.Argument>
-                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,226" sap2010:WorkflowViewState.IdRef="Sequence_21">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Warn" Message="[&quot;Couldn't login to &quot;+CurrentAddress.Item(0).ToString]" />
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Warn" Message="[&quot;Couldn't login to &quot;+CurrentAddress.Item(0).ToString]" />
                                       </Sequence>
                                     </ActivityAction>
                                   </Catch>
@@ -770,7 +778,7 @@
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Sequence DisplayName="Else - validate the profile page" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                            <Sequence DisplayName="Else - validate the profile page" sap:VirtualizedContainerService.HintSize="452,25" sap2010:WorkflowViewState.IdRef="Sequence_19">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Boolean" Name="is_profilePage" />
                               </Sequence.Variables>
@@ -795,7 +803,7 @@
                                     <uix:NCheckElement.Target>
                                       <uix:TargetAnchorable BrowserURL="gb.bebee.com" ContentHash="ZcfJMtX2nkScDVlUOhCvKg" DesignTimeRectangle="152, 263, 120, 120" DesignTimeScaleFactor="1" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl aaname='*' class='img-fluid' tag='IMG' type='' /&gt;" Guid="97415896-8ae5-4ce2-bed9-6b5c7f3541ab" InformativeScreenshot="f0cd68d5fec5a954881481620306e881.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/u5kkUDK3Z0uzFuuMA4mqog" ScopeSelectorArgument="&lt;html app='msedge.exe' title='beBee Wall' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
                                         <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                             <uix:Target CVScreenId="78365fbe-fc98-4422-be10-80aaa1d6efe3" CvElementArea="364, 295, 56, 56" CvType="Icon" DesignTimeRectangle="367, 298, 50, 50" FuzzySelectorArgument="&lt;webctrl type='' href='https://ie.bebee.com/bee/*' tag='A' class='btn btn-sm btn-primary ml-2 btn-rounded' aaname='' /&gt;" Guid="586a6250-cfd1-4352-b1cf-a011d7a0ba79" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALcSURBVGhD3Zo/ixQxGMbXRgUFK0u/g7UfwOJKSyu/g+UtJyJYyGK1jSBYHJb3CezETm0XQRRZ5BAt1kYXbB757W5CJpO5mZ1kMkseeOCYnSTv7yZ/3mRmokI18S+UouRgn35JLz9ID86k23Pp5lPpyol06Xhr/uYav3EP91ImtZKAEdj0jXTrmXT98daTY8/Tnb3r5n7KUkcqyCiwd9+ku6+kq4+kyyf1oPc1dVAXdVJ3jHqBLX9L915L10JPJpGpmzZoq4/2BmNMbMZMoFulNm3QFm3uq73AGOw3ntQDGNq0Sdv7qBPY33/SnRe7SSHDk6p5um2bGIili1rBqIipOcXkEGtiIJYucK1g/JcOAcqYWIipTReC0a+Da9LIJqa2MdcIxky0mSjGGFNtnm5ju2i2DIKxdjDN1io8MBNj0zoXBGNhzLFOxZoYiTWkGhipzJAZRWoTayj9qoGRp/mFh/LRW2lFo2tpflr/vauJ2VcFjMyaJNQvOIQtlFEEHDH7u4IKGNuGXGvWw89uyzutpVmPHkPMxO6qAsaeyC+U2jyprz+k+8/DcIv39TJdTOyuLBiPcujF2O1+6591uNVSOgqU62Jid7ujBWOxGxKsNqY8uNX3/lCY2N0F24KRovg3p3IF6o909mUznDYycH6ZPnbTLAtG1uzfmMI+1OxUmi1t+1HdzzcMRhaMkyP/xljnhMIwGFmw1LlhbigMg5EF48wvVSZfgdotvENDETsMRsnBQlDzc9veMFC4CSxFVxwNaudgV4ydPMaGwsHJI3a6X5iKRoLCwek+doE2YIuP40Dh4AIdm1LZJ+YoJ1RjShWbBPtgq/N8ULgxCUY5ti1DuXHbgnJuNFO6daOZ82ggpVuPBlDOw5xUbj3MQcUev6EiD0xRsUfcqMiXEkZFvkYyKvLFHyr2VS0q8uW6q+I+h3BV5AcsRkV+cuSquI/EfBX3WV9IRX2IeYgqFuw/l6F+rhODo4gAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
                                           </scg:List>
                                         </uix:TargetAnchorable.Anchors>
@@ -804,39 +812,336 @@
                                   </uix:NCheckElement>
                                 </TryCatch.Try>
                               </TryCatch>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="418,166" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Warn" Message="[&quot;User already logged in to &quot;+CurrentAddress.Item(0).ToString+&quot;: &quot;+is_profilePage.ToString]" />
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="418,164" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Warn" Message="[&quot;User already logged in to &quot;+CurrentAddress.Item(0).ToString+&quot;: &quot;+is_profilePage.ToString]" />
                             </Sequence>
                           </If.Else>
                         </If>
-                        <uix:NHover DisplayName="Hover 'Tomasz Wołoszyn Immedia…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="418,225" sap2010:WorkflowViewState.IdRef="NHover_3" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Version="V4">
-                          <uix:NHover.Target>
-                            <uix:TargetAnchorable BrowserURL="free-work.com/en-gb/tech-it/jobs" CVScreenId="3a886023-22c0-4050-8e95-ab3a022af7d5" ContentHash="wi5bHOKHNEOXBAvBBUwUIg" CvElementArea="1295, 178, 21, 20" CvType="ArrowButton" DesignTimeRectangle="1300, 183, 12, 14" DesignTimeScaleFactor="1" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl parentid='user-menu' tag='svg' type='' class='mb-1 h-4 w-4 text-gray-400 icon-custom fill-current flex-none inline-flex' aaname='' /&gt;" Guid="09b7e644-1ef2-41a8-a7f4-6fe0fc0f1ee8" InformativeScreenshot="69c01cbadf96b4e32c9d42edeae61612.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/ZGzrXtFBRUOA_kFEJgTE6g" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tech &amp;amp; IT Jobs for Permanent Employees, Contractors, and Freelancers | Free-Work' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target DesignTimeRectangle="1090, 170, 238, 44" FuzzySelectorArgument="&lt;webctrl id='user-menu' tag='DIV' type='' class='flex items-center justify-center space-x-1 hover:bg-faint-white cursor-pointer px-4' aaname='  ' /&gt;" Guid="80261512-c848-4c30-a8c6-7f20f9aaaa7a" ImageBase64="" SearchSteps="FuzzySelector" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NHover.Target>
-                          <uix:NHover.VerifyOptions>
-                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                              <uix:VerifyExecutionOptions.Retry>
-                                <InArgument x:TypeArguments="x:Boolean" />
-                              </uix:VerifyExecutionOptions.Retry>
-                              <uix:VerifyExecutionOptions.Timeout>
-                                <InArgument x:TypeArguments="x:Double" />
-                              </uix:VerifyExecutionOptions.Timeout>
-                            </uix:VerifyExecutionOptions>
-                          </uix:NHover.VerifyOptions>
-                        </uix:NHover>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click expand option" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="418,189" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Version="V4">
-                          <uix:NClick.Target>
-                            <uix:TargetAnchorable BrowserURL="gb.bebee.com" CVScreenId="5ffb2aef-e247-4f3f-8e5c-9778770dd999" ContentHash="9hvVkkJ-kEKw12rSJ4yiAw" DesignTimeRectangle="1007, 334, 54, 26" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Log out ' tag='SPAN' /&gt;" Guid="9bf0c80a-1859-4e3d-9a4c-e6b0d80de7d4" InformativeScreenshot="b69f40881af6fc69dad0eb7fad611965.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/GiLlaXp3ok-WFmkzBCFSnA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='beBee Wall' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
-                          </uix:NClick.Target>
-                        </uix:NClick>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="418,164" sap2010:WorkflowViewState.IdRef="LogMessage_11" Message="[&quot;Logging out from: &quot;+CurrentAddress.Item(0).ToString]" />
+                        <Sequence DisplayName="Logout" sap:VirtualizedContainerService.HintSize="454,48" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NHover DisplayName="Hover 'Tomasz Wołoszyn Immedia…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NHover_3" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Version="V4">
+                            <uix:NHover.Target>
+                              <uix:TargetAnchorable BrowserURL="free-work.com/en-gb/tech-it/jobs" CVScreenId="3a886023-22c0-4050-8e95-ab3a022af7d5" ContentHash="wi5bHOKHNEOXBAvBBUwUIg" CvElementArea="1295, 178, 21, 20" CvType="ArrowButton" DesignTimeRectangle="1300, 183, 12, 14" DesignTimeScaleFactor="1" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl parentid='user-menu' tag='svg' type='' class='mb-1 h-4 w-4 text-gray-400 icon-custom fill-current flex-none inline-flex' aaname='' /&gt;" Guid="09b7e644-1ef2-41a8-a7f4-6fe0fc0f1ee8" InformativeScreenshot="69c01cbadf96b4e32c9d42edeae61612.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/ZGzrXtFBRUOA_kFEJgTE6g" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tech &amp;amp; IT Jobs for Permanent Employees, Contractors, and Freelancers | Free-Work' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="1090, 170, 238, 44" FuzzySelectorArgument="&lt;webctrl id='user-menu' tag='DIV' type='' class='flex items-center justify-center space-x-1 hover:bg-faint-white cursor-pointer px-4' aaname='  ' /&gt;" Guid="80261512-c848-4c30-a8c6-7f20f9aaaa7a" ImageBase64="" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NHover.Target>
+                            <uix:NHover.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NHover.VerifyOptions>
+                          </uix:NHover>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click expand option" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="gb.bebee.com" CVScreenId="5ffb2aef-e247-4f3f-8e5c-9778770dd999" ContentHash="9hvVkkJ-kEKw12rSJ4yiAw" DesignTimeRectangle="1007, 334, 54, 26" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Log out ' tag='SPAN' /&gt;" Guid="9bf0c80a-1859-4e3d-9a4c-e6b0d80de7d4" InformativeScreenshot="b69f40881af6fc69dad0eb7fad611965.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/GiLlaXp3ok-WFmkzBCFSnA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='beBee Wall' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_11" Message="[&quot;Logging out from: &quot;+CurrentAddress.Item(0).ToString]" />
+                        </Sequence>
                       </Sequence>
-                      <Sequence x:Key="www.hackajob.com" DisplayName="Body" sap:VirtualizedContainerService.HintSize="488,89" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                      <Sequence x:Key="www.hackajob.com" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:Boolean" Name="exists_login" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NGoToUrl DisplayName="Go To URL - directly to the login page" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_4" Url="[CurrentAddress.Item(0).ToString+&quot;/talent/login&quot;]" Version="V4" />
+                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="454,57" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <TryCatch.Try>
+                            <uix:NCheckElement DelayBefore="0" DisplayName="Check Element 'Log In bebee.com'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,157" sap2010:WorkflowViewState.IdRef="NCheckElement_4" Result="[exists_login]" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Timeout="3" Version="V4">
+                              <uix:NCheckElement.Target>
+                                <uix:TargetAnchorable BrowserURL="hackajob.com/talent/login" CVScreenId="df2c3b42-7711-41fd-86a8-1d962269b639" ContentHash="Oh--azYYJEKuoTXpuAKBPw" CvTextArea="88, 347, 238, 93" CvTextArgument="Login" CvType="Text" DesignTimeRectangle="87, 329, 241, 114" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='hs_cos_wrapper_widget_1676980139057' tag='SPAN' type='' class=' text-secondary' aaname='Login' check:innerText='Login' /&gt;" Guid="81d9cee6-4c37-43fe-8e34-e9059ff411b5" InformativeScreenshot="41b11fb912af7afd12249c1dac561602.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/Lz-fHk8Jv02dwd8ZNBOAHA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Log In | hackajob for Candidates' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target CVScreenId="df2c3b42-7711-41fd-86a8-1d962269b639" CvTextArea="32, 180, 210, 50" CvTextArgument="hackajob" CvType="Text" DesignTimeRectangle="24, 176, 226, 59" FuzzySelectorArgument="&lt;webctrl tag='LOTTIE-PLAYER' /&gt;&lt;webctrl type='' shadowhostid='' tag='image' class='' aaname='' /&gt;" Guid="20829b04-2ac1-4d88-8407-cedfded3b047" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NCheckElement.Target>
+                            </uix:NCheckElement>
+                          </TryCatch.Try>
+                          <TryCatch.Catches>
+                            <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                              <ActivityAction x:TypeArguments="s:Exception">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,226" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Fatal" Message="[&quot;Coudln't find the login button! User already logged in or page &quot;+CurrentAddress.item(0).ToString+&quot; wasn't open properly.&quot;]" />
+                                </Sequence>
+                              </ActivityAction>
+                            </Catch>
+                          </TryCatch.Catches>
+                          <TryCatch.Finally>
+                            <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </TryCatch.Finally>
+                        </TryCatch>
+                        <If Condition="[exists_login]" DisplayName="If - not logged in" sap:VirtualizedContainerService.HintSize="454,1526" sap2010:WorkflowViewState.IdRef="If_3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If.Then>
+                            <Sequence DisplayName="Then - login" sap:VirtualizedContainerService.HintSize="452,1105" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,1045" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                                <TryCatch.Try>
+                                  <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,565" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - email" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Text="[str_userEmail]" Timeout="3" Version="V4">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="hackajob.com/talent/login" CVScreenId="c70fdc7a-dc06-41ae-bc28-d33ad0887f0f" ContentHash="tI569nhDpE6Ak2_MMioEXA" CvElementArea="85, 546, 668, 45" CvType="InputBox" DesignTimeRectangle="87, 592, 665, 44" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' class='required' placeholder='Enter email' aaname='' /&gt;" Guid="b10b9b9a-ba65-4728-a4c2-05e4dd4928d6" InformativeScreenshot="ab713f65d8b235d109be85aa2273a4e7.png" IsResponsive="True" Reference="S_LMoOQ4uUKB01M6qo1BNg/5ev8nc7USkKcTwsis5WkGg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Log In | hackajob for Candidates' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <uix:Target CVScreenId="c70fdc7a-dc06-41ae-bc28-d33ad0887f0f" DesignTimeRectangle="87, 559, 55, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Email:' check:innerText='Email:*' /&gt;" Guid="dfb459d7-bc7d-4de4-9ef4-5ab9368ee5ff" SearchSteps="FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NTypeInto.Target>
+                                      <uix:NTypeInto.VerifyOptions>
+                                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                            <InArgument x:TypeArguments="x:Boolean" />
+                                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                            <InArgument x:TypeArguments="x:Double" />
+                                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                        </uix:VerifyExecutionTypeIntoOptions>
+                                      </uix:NTypeInto.VerifyOptions>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Text="[str_userPassword]" Timeout="5" Version="V4">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="hackajob.com/talent/login" CVScreenId="a4f5ec60-65ad-4664-81ed-3ddf947da3d3" ContentHash="EhzaKj3E60O3DA5MMlwPIg" CvElementArea="86, 692, 667, 44" CvType="InputBox" DesignTimeRectangle="87, 693, 665, 44" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='required' placeholder='Enter password' aaname='' /&gt;" Guid="fafb3ba7-446b-4fd1-8ada-2427c29b0304" InformativeScreenshot="9497da51fac99962f169f2c6a39d6ab5.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/hjikmPWtAEiVF9KDSgc61A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Log In | hackajob for Candidates' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <uix:Target CVScreenId="a4f5ec60-65ad-4664-81ed-3ddf947da3d3" DesignTimeRectangle="87, 660, 88, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Password:' tag='LABEL' type='' class='' check:innerText='Password:*' /&gt;" Guid="69eba464-eb81-452f-bb1f-d35cad08dde0" SearchSteps="FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NTypeInto.Target>
+                                      <uix:NTypeInto.VerifyOptions>
+                                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                            <InArgument x:TypeArguments="x:Boolean" />
+                                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                            <InArgument x:TypeArguments="x:Double" />
+                                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                        </uix:VerifyExecutionTypeIntoOptions>
+                                      </uix:NTypeInto.VerifyOptions>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NTypeInto>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign in'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Timeout="5" Version="V4">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="hackajob.com/talent/login" CVScreenId="a4f5ec60-65ad-4664-81ed-3ddf947da3d3" ContentHash="i_JqMJMMlkW6-C_9OLTOQA" CvElementArea="85, 760, 92, 46" CvTextArea="103, 775, 56, 18" CvTextArgument="Sign In" CvType="Button" DesignTimeRectangle="87, 761, 90, 44" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='cta-button' aaname='Sign In' check:innerText='Sign In' /&gt;" Guid="65b39c4a-a298-4411-8995-ac90f4933050" InformativeScreenshot="598a14772633fad450ae936997762752.png" Reference="S_LMoOQ4uUKB01M6qo1BNg/wDnRPdl5GketreJ87MrANw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Log In | hackajob for Candidates' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <uix:Target CVScreenId="a4f5ec60-65ad-4664-81ed-3ddf947da3d3" CvTextArea="191, 775, 178, 18" CvTextArgument="Forgot your password" CvType="Text" DesignTimeRectangle="191, 772, 178, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='login-candidate' tag='A' type='' class='cta-button text-primary' aaname='Forgot your password' check:innerText='Forgot your password' /&gt;" Guid="0317bd88-24f8-43c7-8860-9fc3c929a9b7" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                          <uix:TargetAnchorable.PointOffset>
+                                            <uix:PointOffset X="-6" Y="-2" />
+                                          </uix:TargetAnchorable.PointOffset>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                      <uix:NClick.VerifyOptions>
+                                        <uix:VerifyExecutionOptions DisplayName="Icon 'Tomasz Wołoszyn'" Mode="Appears">
+                                          <uix:VerifyExecutionOptions.Retry>
+                                            <InArgument x:TypeArguments="x:Boolean" />
+                                          </uix:VerifyExecutionOptions.Retry>
+                                          <uix:VerifyExecutionOptions.Target>
+                                            <uix:TargetAnchorable BrowserURL="user.hackajob.com/dashboard" CVScreenId="d1097235-d5ce-42d6-afbd-bb5c21e2a160" CvTextArea="254, 181, 128, 21" CvTextArgument="Dashboard" CvType="Text" DesignTimeRectangle="256, 176, 289, 32" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='' aaname='Dashboard' check:innerText='Dashboard' /&gt;" Guid="3a1f58a8-5507-4d31-9b0a-4d2f0c9033ea" InformativeScreenshot="8bee3e03a26837f8f8ee0490ae759d5c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='hackajob' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                  <uix:Target CVScreenId="d1097235-d5ce-42d6-afbd-bb5c21e2a160" CvTextArea="33, 190, 147, 35" CvTextArgument="hackajob" CvType="Text" DesignTimeRectangle="36, 192, 142, 32" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl tag='IMG' type='' class='' aaname='hackajob' /&gt;" Guid="b0175e4e-5281-4a05-a942-bbfca6207ffe" SearchSteps="FuzzySelector, CV" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:VerifyExecutionOptions.Target>
+                                          <uix:VerifyExecutionOptions.Timeout>
+                                            <InArgument x:TypeArguments="x:Double" />
+                                          </uix:VerifyExecutionOptions.Timeout>
+                                        </uix:VerifyExecutionOptions>
+                                      </uix:NClick.VerifyOptions>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NClick>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Trace" Message="[&quot;Login success.&quot;]" />
+                                  </Sequence>
+                                </TryCatch.Try>
+                                <TryCatch.Catches>
+                                  <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_7">
+                                    <ActivityAction x:TypeArguments="s:Exception">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,226" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Warn" Message="[&quot;Couldn't login to &quot;+CurrentAddress.Item(0).ToString]" />
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </Catch>
+                                </TryCatch.Catches>
+                                <TryCatch.Finally>
+                                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </TryCatch.Finally>
+                              </TryCatch>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Else - validate the profile page" sap:VirtualizedContainerService.HintSize="452,283" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:Boolean" Name="is_profilePage" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,57" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <TryCatch.Try>
+                                  <uix:NCheckElement DelayBefore="0" DisplayName="Check Element 'A https://ie.bebee.com/…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,157" sap2010:WorkflowViewState.IdRef="NCheckElement_5" Result="[is_profilePage]" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Version="V4">
+                                    <uix:NCheckElement.Target>
+                                      <uix:TargetAnchorable BrowserURL="user.hackajob.com/dashboard" CVScreenId="86343b64-b700-4d97-9765-1e0f43bdafba" CvTextArea="254, 181, 128, 21" CvTextArgument="Dashboard" CvType="Text" DesignTimeRectangle="256, 176, 289, 32" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='' aaname='Dashboard' check:innerText='Dashboard' /&gt;" Guid="48ca3a4b-8a03-47c0-8f31-c46e33fa50c1" InformativeScreenshot="edf0d6a122e8f60e1ac9296808b71218.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='hackajob' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                            <uix:Target CVScreenId="86343b64-b700-4d97-9765-1e0f43bdafba" CvTextArea="33, 190, 147, 35" CvTextArgument="hackajob" CvType="Text" DesignTimeRectangle="36, 192, 142, 32" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl tag='IMG' type='' class='' aaname='hackajob' /&gt;" Guid="1dd291b0-f8d5-4d3f-939f-101746b4c614" SearchSteps="FuzzySelector, CV" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NCheckElement.Target>
+                                  </uix:NCheckElement>
+                                </TryCatch.Try>
+                                <TryCatch.Catches>
+                                  <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_8">
+                                    <ActivityAction x:TypeArguments="s:Exception">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,226" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Warn" Message="[&quot;User page not found!&quot;]" />
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </Catch>
+                                </TryCatch.Catches>
+                                <TryCatch.Finally>
+                                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </TryCatch.Finally>
+                              </TryCatch>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="418,166" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Warn" Message="[&quot;User already logged in to &quot;+CurrentAddress.Item(0).ToString+&quot;: &quot;+is_profilePage.ToString]" />
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                        <Sequence DisplayName="Logout" sap:VirtualizedContainerService.HintSize="454,438" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click expand option" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4fb4ef53-bf6f-4c08-93dd-4ccc6f1f312a" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="user.hackajob.com/dashboard" CVScreenId="6122344b-ebde-4779-8334-7c99b7e847fe" CvTextArea="71, 987, 54, 16" CvTextArgument="Log out" CvType="Text" DesignTimeRectangle="40, 982, 164, 24" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl aaname='Log out' class='mat-button-wrapper' tag='SPAN' type='' check:innerText='log_out&amp;#xA;Log out' /&gt;" Guid="b8d74543-afec-4377-a28d-7179b36dd730" InformativeScreenshot="439bb62f8319fbca774a90236be772ad.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='hackajob' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <uix:Target CVScreenId="6122344b-ebde-4779-8334-7c99b7e847fe" CvElementArea="41, 982, 22, 23" CvType="Icon" DesignTimeRectangle="40, 982, 24, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='log_out' class='hj-icon' tag='SPAN' type='' check:innerText='log_out' /&gt;" Guid="10d95f17-4b8c-47a6-bc52-7fad124046c7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD6SURBVEhL7ZUxC4JAFMf9IH4Rv4H0IYTmhOaQlmhI+gDhEhJEBIGbTTXZ5uYS3NYYNAgNgsM/sobwnpp63hAd/JZ7vPfjeHf3FFVVIRMlv9E1f6FwSoX62IV3DMHOrJRwb8Mg8ikKhcaWIcGXK4ngEDUoCoQ2wjuAWwC7l4+1o0C4AQMQnyZErB0ChBqslQ93pBExHgFCB9Gz2ckVh2m1VIBQhTbwwLIbFiOY61z8k9pCvW/CHBLMfFze0mhpcHkNhS5Ymn8TxEoZXK5mI6H0E9J02kMe6bdUg7Xw4Mh7h/UoEEr/S6VPixfZPNx51awFzMOu+AuF8/vCB9sxDxGXz/90AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_17" Message="[&quot;Logging out from: &quot;+CurrentAddress.Item(0).ToString]" />
+                        </Sequence>
+                      </Sequence>
+                      <Sequence x:Key="www.jobs24.co.uk" DisplayName="Body" sap:VirtualizedContainerService.HintSize="488,89" sap2010:WorkflowViewState.IdRef="Sequence_42">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
