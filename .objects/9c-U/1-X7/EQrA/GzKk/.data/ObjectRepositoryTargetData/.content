@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="U7fLJPlP-kqLAHk-YWs5pw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="gb.bebee.com" CVScreenId="49bc0636-e206-4bc8-a0fb-b54b551a9dc3" CvTextArea="1207, 337, 56, 18" CvTextArgument="Log out" CvType="Text" DesignTimeRectangle="1208, 333, 53, 26" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Log out ' tag='SPAN' /&gt;" Guid="bd4606c9-15c7-40d5-acc3-94516438622e" ScopeSelectorArgument="&lt;html app='msedge.exe' title='beBee Wall' /&gt;" SearchSteps="Selector, CV" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="c0c4271cdb89df84a74d26c6ee3e9195.png" xmlns="">0iPFZox2FAkWjkA6A2K3Zsw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
