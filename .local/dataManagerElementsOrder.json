@@ -12,12 +12,16 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "exists_login&Sequence_42",
         "dt_addresses&Sequence_2",
         "str_userEmail&Sequence_2",
         "str_userPassword&Sequence_2",
         "is_loginBtn&Sequence_7",
         "exists_login&Sequence_8",
-        "is_profilePage&Sequence_19"
+        "is_profilePage&Sequence_19",
+        "exists_login&Sequence_17",
+        "is_profilePage&Sequence_32",
+        "is_profilePage&Sequence_43"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
